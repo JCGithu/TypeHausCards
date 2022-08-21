@@ -4,6 +4,7 @@
   export let clicked;
   let styling = { background: "hsla(0, 0%, 14%, 0)" };
   let winRatio;
+  let flipped = false;
 
   onMount(() => {
     styling.left = clicked.left + "px";
@@ -32,6 +33,7 @@
   let mouseSheen = 0;
 
   function cardMove(e) {
+    console.log(e);
     let cardPosition = e.target.getBoundingClientRect();
     let cardCenterX = cardPosition.left + cardPosition.width / 2;
     let cardCenterY = cardPosition.top + cardPosition.height / 2;
@@ -40,6 +42,12 @@
     mousePercentX = (mouseX / (cardPosition.width / 2)) * 15;
     mousePercentY = (mouseY / (cardPosition.height / 2)) * -10;
     mouseSheen = ((e.clientY - cardPosition.top) / (cardPosition.bottom - cardPosition.top)) * 100;
+  }
+
+  function cardClick(e) {
+    console.log("clicked!");
+    flipped = !flipped;
+    //styling.z = flipped ? 21 : 19;
   }
 
   function mouseLeave(e) {
@@ -55,10 +63,11 @@
   }
 </script>
 
-<section out:fade class="cardContainer" style="background-color:{styling.background}">
+<section out:fade class="cardContainer" style="background-color:{styling.background};">
   <p on:click={close}>X</p>
-  <div class="card" style:transform={`perspective(400px) rotateY(${mousePercentX}deg) rotateX(${mousePercentY}deg)`} style:--degree={`${(mousePercentX - mousePercentY) / 2}deg`} style:--p1="{Math.round(mouseSheen) - 10}%" style:--p2="{Math.round(mouseSheen)}%" style:--p3="{Math.round(mouseSheen) + 10}%" style:left={styling.left} style:top={styling.top} on:mousemove|self={cardMove} on:mouseleave|self={mouseLeave}>
-    <img style:width={styling.width} style:height={styling.height} src={clicked.src} alt={clicked.alt} />
+  <div on:click={cardClick} class="card" style:transform={`perspective(400px) rotateY(${mousePercentX + (flipped ? 180 : 0)}deg) rotateX(${mousePercentY}deg)`} style:--degree={`${(mousePercentX - mousePercentY) / 2}deg`} style:--p1="{Math.round(mouseSheen) - 10}%" style:--p2="{Math.round(mouseSheen)}%" style:--p3="{Math.round(mouseSheen) + 10}%" style:left={styling.left} style:top={styling.top} on:mousemove={cardMove} on:mouseleave|self={mouseLeave}>
+    <img id="cardBack" style={`z-index:${styling.z}; width:${styling.width}; height:${styling.height}`} src="/images/Card_Back.png" alt={clicked.alt} />
+    <img id="cardFront" style:width={styling.width} style:height={styling.height} src={clicked.src} alt={clicked.alt} />
   </div>
   <div id="fill" on:click={close} />
 </section>
