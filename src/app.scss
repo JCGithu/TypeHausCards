@@ -79,6 +79,7 @@ main {
   grid-template-columns: repeat(4, 25%);
   grid-column-gap: 0px;
   grid-row-gap: 2rem;
+  //scroll-snap-type: mandatory;
   width: 80vw;
   -webkit-filter: blur(0px);
   transition: all ease 1s;

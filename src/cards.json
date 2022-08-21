@@ -121,7 +121,7 @@
   "Harry": {
     "img": "/images/Spades_6.png",
     "name": "Harry",
-    "handle": "@everythingmstgo"
+    "handle": "@harryweld.io"
   },
   "brian": {
     "img": "/images/Diamonds_6.png",
@@ -288,15 +288,15 @@
   "Blank": {
     "blank": true
   },
-  "Meg":{
+  "Kelly":{
     "img": "/images/Joker_1.png",
-    "name": "Meg",
-    "handle": "@contentbymeg / @okcoolmeg"
-  },
-  "Kelly": {
-    "img": "/images/Joker_2.png",
     "name": "Kelly",
     "handle": "@aloafofcatz"
+  },
+  "Meg": {
+    "img": "/images/Joker_2.png",
+    "name": "Meg",
+    "handle": "@contentbymeg / @okcoolmeg"
   },
   "Blank2": {
     "blank": true
