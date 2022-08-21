@@ -1,0 +1,304 @@
+{
+  "Jhube": {
+    "img": "/images/Clubs_Ace.png",
+    "name": "jhube",
+    "handle": "@jhubeJELLO"
+  },
+  "Jess": {
+    "img": "/images/Hearts_Ace.png",
+    "name": "Jess",
+    "handle": "@jess.face",
+    "info": "Marty is an inspiration. That is all."
+  },
+  "Pau":{
+    "img":"/images/Spades_Ace.png",
+    "name": "Pau",
+    "handle": "@laro.pau"
+  },
+  "Aly": {
+    "img": "/images/Diamonds_Ace.png",
+    "name": "Aly",
+    "handle": "@blougsie",
+    "info": "My card is inspired by the funky, retro, geometric patterns found in an arcade! :)"
+  },
+  "mickey":{
+    "img": "/images/Clubs_2.png",
+    "name": "mickey",
+    "handle": "@itscunning"
+  },
+  "zZizify":{
+    "img": "/images/Hearts_2.png",
+    "name": "zZizify"
+  },
+  "Taylor": {
+    "img": "/images/Spades_2.png",
+    "name": "Taylor",
+    "handle": "@tay________lor"
+  },
+  "Gina": {
+    "img": "/images/Diamonds_2.png",
+    "name": "Gina",
+    "handle": "@stxrling.stxdio"
+  },
+  "Pao":{
+    "img": "/images/Clubs_3.png",
+    "name": "Pao",
+    "handle": "@paoisanillustrator"
+  },
+  "Megin": {
+    "img": "/images/Hearts_3.png",
+    "name": "Megin",
+    "handle": "@meginmadethis"
+  },
+  "Luna": {
+    "img": "/images/Spades_3.png",
+    "name": "Luna",
+    "pronouns": "(she/they)",
+    "handle": "@garlicbread.gfx"
+  },
+  "Richard": {
+    "img": "/images/Diamonds_3.png",
+    "name": "Richard",
+    "handle": "@Moir.prints",
+    "info": "I had a lot of fun making this and it is my first design for a collaboration I've ever done. I hope you all like it! x"
+  },
+  "Kacie": {
+    "img": "/images/Clubs_4.png",
+    "name": "Kacie",
+    "handle": "@kaciemariedesign",
+    "info": "I just think birds are neat."
+  },
+  "Kaira":{
+    "img": "/images/Hearts_4.png",
+    "name": "Kaira",
+    "handle": "@by.ks_png",
+    "info": "Representing 4 of hearts with a beautiful lady ❤️"
+  },
+  "Jodie": {
+    "img": "/images/Spades_4.png",
+    "name": "Jodie",
+    "handle": "@hullojodie",
+    "info": "An experiment in creating traditional art and combining it with modern practices."
+  },
+  "Elena":{
+    "img": "/images/Diamonds_4.png",
+    "name": "Éléna",
+    "handle": "@elena.indd",
+    "info": "4 of diamonds -> 4d, did a bunch of research on the 4th dimension, eventually got on the wikipedia page of the beginning of cubism (mathematics and art) and then turned my card into a futurism-cubist artwork because 4D is incredibly beyond our understanding."
+  },
+  "Victoria": {
+    "img": "/images/Clubs_5.png",
+    "name": "Victoria",
+    "handle": "@sleepingtillate"
+  },
+  "Miranda": {
+    "img": "/images/Hearts_5.png",
+    "name": "Miranda",
+    "handle": "@miranda.xyz"
+  },
+  "Anak": {
+    "img": "/images/Spades_5.png",
+    "name": "Anak",
+    "handle": "@anakdotorg",
+    "info": "Everything was drawn with my left hand. I am righthanded."
+  },
+  "Abi": {
+    "img": "/images/Diamonds_5.png",
+    "name": "Abi",
+    "handle": "@abiliminal"
+  },
+  "Amiiba":{
+    "img": "/images/Clubs_6.png",
+    "name": "Amiiba",
+    "handle": "@amena.bonk"
+  },
+  "Reo": {
+    "img": "/images/Hearts_6.png",
+    "name": "Reo",
+    "handle": "@reoisrad",
+    "info": "I use a lot with photos are type in my work, so I wanted to go simple and colorful!"
+  },
+  "Harry": {
+    "img": "/images/Spades_6.png",
+    "name": "Harry",
+    "handle": "@everythingmstgo"
+  },
+  "brian": {
+    "img": "/images/Diamonds_6.png",
+    "name": "brian",
+    "handle": "@brianraudenbush",
+    "info": "My first thought was Diamonds Are a Girl's Best Friend and I ran with it. I'm so used to designing in a poster style so it was challenging trying to tone my maximalist ways down a bit, but I had so much fun making this!"
+  },
+  "pau": {
+    "img": "/images/Clubs_7.png",
+    "name": "Pau",
+    "handle": "@laro.pau"
+  },
+  "Broges": {
+    "img": "/images/Hearts_7.png",
+    "name": "broges",
+    "handle": "@brogesworld"
+  },
+  "blank": {
+    "img": "/images/Spades_7.png",
+    "name": "Miranda",
+    "handle": "@miranda.xyz"
+  },
+  "Ian": {
+    "img": "/images/Diamonds_7.png",
+    "name": "Ian",
+    "handle": "@takeiteasy.ian",
+    "info": "What a lucky draw! 7 is a beautiful number and diamonds were such a fun suit to work with."
+  },
+  "geo": {
+    "img": "/images/Clubs_8.png",
+    "name": "GEO",
+    "handle": "@geojum",
+    "info": "II just started drawing without any thoughts and I wanted to somehow incorporate the symbol and the number. As I drew, this character reminded me of One Piece character Rosinante, who had some face paintings and would smile a lot."
+  },
+  "Christos": {
+    "img": "/images/Hearts_8.png",
+    "name": "Christos.Jpeg",
+    "handle": "@christos.jpeg"
+  },
+  "Tony": {
+    "img": "/images/Spades_8.png",
+    "name": "Tony",
+    "handle": "@quills_and_spells"
+  },
+  "Aud": {
+    "img": "/images/Diamonds_8.png",
+    "name": "aud",
+    "handle": "@audreacain"
+  },
+  "Violet": {
+    "img": "/images/Clubs_9.png",
+    "name": "violet vendetta",
+    "handle": "@natamakesmagic",
+    "info": "Inspired by my favorite reptiles and a tapestry I have in my room."
+  },
+  "Nook": {
+    "img": "/images/Hearts_9.png",
+    "name": "nook",
+    "handle": "@nookstray",
+    "info": "The design is inspired by manga panels and the kanji in the center means heart!"
+  },
+  "Jimmy": {
+    "img": "/images/Spades_9.png",
+    "name": "Jimmy",
+    "handle": "@jimmyjamjemz",
+    "info": "I love fish!"
+  },
+  "Tyler": {
+    "img": "/images/Diamonds_9.png",
+    "name": "Tyler",
+    "handle": "@tlrbrrn",
+    "info": "Abstract but still legible."
+  },
+  "Rayne": {
+    "img": "/images/Clubs_10.png",
+    "name": "Rayne",
+    "handle": "@raynesthings",
+    "info": "Hi I'm Rayne's Things, and this is my interpretation of the 10 of clubs using my style of portraiture!"
+  },
+  "Alana":{
+    "img": "/images/Hearts_10.png",
+    "name": "Alana",
+    "handle": "@alanaaivi",
+    "info": "Woohoo. Made in C4D and retouched in PS"
+  },
+  "Mokokain": {
+    "img": "/images/Spades_10.png",
+    "name": "Mokokain",
+    "handle": "@who.am.i.liam"
+  },
+  "Red": {
+    "img": "/images/Diamonds_10.png",
+    "name": "Red",
+    "handle": "@its_thered",
+    "info": "A homage to the Carina Nebula captured by the James Webb Space Telescope. If you can't find it, it's yours to discover!"
+  },
+  "Peggy": {
+    "img": "/images/Clubs_Jack.png",
+    "name": "Peggy",
+    "handle": "@pegazisk",
+    "info": "The Jack(rabbit)s with Clubs! This card is based on origin of playing cards, where Jacks were referred to as Knaves, and the silly medieval manuscript decorations during the same time period of wild killer rabbits."
+  },
+  "Bil":{
+    "img": "/images/Hearts_Jack.png",
+    "name": "Bil Gaines",
+    "handle": "@bilgaines",
+    "info": "Jack of Hearts / Knight of Cups"
+  },
+  "Rayne2": {
+    "img": "/images/Spades_Jack.png",
+    "name": "Rayne",
+    "handle": "@raynesthings"
+  },
+  "Malka": {
+    "img": "/images/Diamonds_Jack.png",
+    "name": "Malka",
+    "handle": "@mshterndesign",
+    "info": "I was inspired by the various moths that there are in this world, with their wide color range and patterns. I also tried as much as I could to have the artwork still look like a moth no matter what way you turn it."
+  },
+  "Hilary": {
+    "img": "/images/Clubs_Queen.png",
+    "name": "Hilary",
+    "handle": "@hilariffic",
+    "info": "Inspired by the name of the card I was assigned to (queen of clubs) itself, I created a design using shapes extracted from the club symbol that shows a girl drinking at a club."
+  },
+  "Melle": {
+    "img": "/images/Hearts_Queen.png",
+    "name": "Melle",
+    "handle": "@mellemony",
+    "info": "Queen of Hearts, as a kitty cat."
+  },
+  "Goose": {
+    "img": "/images/Spades_Queen.png",
+    "name": "Crunchy Goose",
+    "handle": "@crunchy.goose"
+  },
+  "Logan": {
+    "img": "/images/Diamonds_Queen.png",
+    "name": "Logan",
+    "handle": "@loganlabroke"
+  },
+  "Caroline": {
+    "img": "/images/Clubs_King.png",
+    "name": "Caroline",
+    "handle": "@studio.caroline.dietl",
+    "info": "I chose a Saluki Dog to represent the King Of Clubs, these dogs often have very detailed and regal collars, which I had to add in here of course! The style of the card was inspired by medieval illustrations as well."
+  },
+  "Snailerie": {
+    "img": "/images/Hearts_King.png",
+    "name": "snailerie",
+    "handle": "@snailerie.co",
+    "info": "The King of Hearts, in my mind, is a raccoon eating and embracing his cotton candy."
+  },
+  "Mon": {
+    "img": "/images/Spades_King.png",
+    "name": "Mon",
+    "handle": "@raccoonmayor"
+  },
+  "Michelle": {
+    "img": "/images/Diamonds_King.png",
+    "name": "Michelle",
+    "handle": "@momsmags"
+  },
+  "Blank": {
+    "blank": true
+  },
+  "Meg":{
+    "img": "/images/Joker_1.png",
+    "name": "Meg",
+    "handle": "@contentbymeg / @okcoolmeg"
+  },
+  "Kelly": {
+    "img": "/images/Joker_2.png",
+    "name": "Kelly",
+    "handle": "@aloafofcatz"
+  },
+  "Blank2": {
+    "blank": true
+  }
+}
