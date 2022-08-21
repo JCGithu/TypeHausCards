@@ -14,7 +14,7 @@
     winRatio = window.innerWidth / window.innerHeight;
     console.log(winRatio);
     setTimeout(() => {
-      let cardHeight = 80;
+      let cardHeight = 65;
       if (winRatio < 0.9) cardHeight = 100 * winRatio;
       let cardWidth = cardHeight * clicked.ratio;
       let vhRatio = cardWidth / 2;
