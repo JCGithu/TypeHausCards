@@ -181,9 +181,10 @@ main {
     //z-index: 20;
   }
   #cardFront{
-    transform: translateZ(40px) scale(1);
+    //transform: translateZ(200px) scale(1);
     transform-style: preserve-3d ;
     backface-visibility: hidden;
+    z-index: -1;
   }
   #cardBack{
     transform: translateZ(-40px) scale(1);
