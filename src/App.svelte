@@ -1,8 +1,11 @@
 <script>
   import cardData from "./cards.json";
   import Card from "./Card.svelte";
+  import { onMount } from "svelte";
   let cardList = Object.keys(cardData);
   let clicked = { on: false };
+
+  let winSize = false;
 
   console.log(cardData);
 
@@ -27,6 +30,18 @@
   function closeCard() {
     clicked.on = !clicked.on;
   }
+
+  function winSizeCheck(width) {
+    winSize = false;
+    if (width > 1127) winSize = true;
+  }
+
+  onMount(() => {
+    winSizeCheck(window.innerWidth);
+    window.addEventListener("resize", () => {
+      winSizeCheck(window.innerWidth);
+    });
+  });
 </script>
 
 <main>
@@ -41,7 +56,7 @@
         <div>
           <h2>
             {#if cardData[card].name}
-              {cardData[card].name}
+              {winSize ? cardData[card].name : cardData[card].name.replace(".", " .")}
             {/if}
             {#if cardData[card].pronouns}
               <i>{cardData[card].pronouns}</i>
