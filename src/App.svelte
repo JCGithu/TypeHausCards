@@ -2,6 +2,7 @@
   import cardData from "./cards.json";
   import Card from "./Card.svelte";
   import { onMount } from "svelte";
+  import GridItem from "./GridItem.svelte";
   let cardList = Object.keys(cardData);
   let clicked = { on: false };
 
@@ -13,8 +14,8 @@
     clicked.on = !clicked.on;
   }
 
-  function listHover(e, cardStuff) {
-    let target = e.target.getBoundingClientRect();
+  function listHover({ detail }) {
+    let target = detail.target.getBoundingClientRect();
     clicked = {
       left: target.left,
       top: target.top,
@@ -22,8 +23,8 @@
       height: target.height,
       ratio: target.width / target.height,
       on: clicked.on,
-      src: e.target.src,
-      alt: e.target.alt,
+      src: detail.target.src,
+      alt: detail.target.alt,
     };
   }
 
@@ -52,31 +53,17 @@
 </svelte:head>
 
 <main>
-  <h1 style:-webkit-filter={clicked.on ? "blur(5px)" : "blur(0px)"}>Haus of Cards</h1>
+  <header style:-webkit-filter={clicked.on ? "blur(5px)" : "blur(0px)"}>
+    <h1>Haus of Cards</h1>
+    <p>Click on cards to display them, and again to flip</p>
+  </header>
   {#if clicked.on}
     <Card on:close={closeCard} {clicked} />
   {/if}
-  <div class="grid" style:-webkit-filter={clicked.on ? "blur(5px)" : "blur(0px)"}>
-    {#each cardList as card}
-      <div class="item" on:click={listClick}>
-        <img loading="lazy" src={cardData[card].img} alt={cardData[card].name} on:mouseenter={listHover} />
-        <div>
-          <h2>
-            {#if cardData[card].name}
-              {winSize ? cardData[card].name : cardData[card].name.replace(".", " .")}
-            {/if}
-            {#if cardData[card].pronouns}
-              <i>{cardData[card].pronouns}</i>
-            {/if}
-          </h2>
-          {#if cardData[card].handle}
-            <h4>{cardData[card].handle}</h4>
-          {/if}
-          {#if cardData[card].info}
-            <i>{cardData[card].info}</i>
-          {/if}
-        </div>
-      </div>
+  <div class="grid" id="cardGrid" style:-webkit-filter={clicked.on ? "blur(5px)" : "blur(0px)"}>
+    {#each cardList as card, id}
+      <GridItem itemData={cardData[card]} {id} {winSize} on:click={listClick} on:entered={listHover} />
     {/each}
+    <span id="buffer" />
   </div>
 </main>

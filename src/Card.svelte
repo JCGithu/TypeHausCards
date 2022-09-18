@@ -45,7 +45,6 @@
   }
 
   function cardClick(e) {
-    console.log("clicked!");
     flipped = !flipped;
     //styling.z = flipped ? 21 : 19;
   }
@@ -64,10 +63,13 @@
 </script>
 
 <section out:fade class="cardContainer" style="background-color:{styling.background};">
-  <p on:click={close}>X</p>
+  <p id="closer" on:click={close}>X</p>
   <div on:click={cardClick} class="card" style:transform={`perspective(400px) rotateY(${mousePercentX + (flipped ? 180 : 0)}deg) rotateX(${mousePercentY}deg)`} style:--degree={`${(mousePercentX - mousePercentY) / 2}deg`} style:--p1="{Math.round(mouseSheen) - 10}%" style:--p2="{Math.round(mouseSheen)}%" style:--p3="{Math.round(mouseSheen) + 10}%" style:left={styling.left} style:top={styling.top} on:mousemove={cardMove} on:mouseleave|self={mouseLeave}>
     <img id="cardBack" style={`z-index:${styling.z}; width:${styling.width}; height:${styling.height}`} src="/images/Card_Back.png" alt={clicked.alt} />
     <img id="cardFront" style:width={styling.width} style:height={styling.height} src={clicked.src} alt={clicked.alt} />
   </div>
+  {#if flipped}
+    <p id="backCredit" style:--height={styling.height}>Brady<br />@bradyc.design</p>
+  {/if}
   <div id="fill" on:click={close} />
 </section>
