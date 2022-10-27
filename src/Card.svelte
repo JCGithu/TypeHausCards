@@ -31,7 +31,6 @@
   let mousePercentX = 0;
   let mousePercentY = 0;
   let mouseSheen = 0;
-  let wow = "test";
 
   function cardMove(e) {
     //console.log(e);
@@ -48,7 +47,7 @@
 
   window.addEventListener("deviceorientation", (ev) => {
     // ev.alpha -- steering wheel, ev.beta -- tilt, ev.gamma -- spin 0 is front;
-    let wow = ev.toString();
+    console.log(ev);
     let spin = ev.gamma / 3;
     if (spin > 15) spin = 15;
     if (spin < -15) spin = -15;
@@ -79,7 +78,7 @@
 </script>
 
 <section out:fade class="cardContainer" style="background-color:{styling.background};">
-  <span>{wow},{mousePercentY}</span>
+  <span>{mousePercentY}</span>
   <p id="closer" on:click={close}>X</p>
   <div on:click={cardClick} class="card" style:transform={`perspective(400px) rotateY(${mousePercentX + (flipped ? 180 : 0)}deg) rotateX(${mousePercentY}deg)`} style:--degree={`${(mousePercentX - mousePercentY) / 2}deg`} style:--p1="{Math.round(mouseSheen) - 10}%" style:--p2="{Math.round(mouseSheen)}%" style:--p3="{Math.round(mouseSheen) + 10}%" style:left={styling.left} style:top={styling.top} on:mousemove={cardMove} on:mouseleave|self={mouseLeave}>
     <img id="cardBack" style={`z-index:${styling.z}; width:${styling.width}; height:${styling.height}`} src="/images/Card_Back.png" alt={clicked.alt} />
