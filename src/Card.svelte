@@ -6,7 +6,7 @@
   let winRatio;
   let flipped = false;
 
-  let initialTilt = false;
+  let initialTilt = 0;
   let tiltStart = 0;
 
   onMount(() => {
@@ -51,9 +51,9 @@
   if (window.DeviceOrientationEvent) {
     window.addEventListener("deviceorientation", (ev) => {
       // ev.alpha -- steering wheel, ev.beta -- tilt, ev.gamma -- spin 0 is front;
-      if (!initialTilt) {
+      initialTilt++;
+      if ((initialTilt = 30)) {
         tiltStart = ev.beta;
-        initialTilt = true;
       }
       let spin = ev.gamma / 3;
       if (spin > 15) spin = 15;
