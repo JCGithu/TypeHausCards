@@ -6,9 +6,6 @@
   let winRatio;
   let flipped = false;
 
-  let initialTilt = 0;
-  let tiltStart = 0;
-
   onMount(() => {
     styling.left = clicked.left + "px";
     styling.top = clicked.top + "px";
@@ -51,19 +48,14 @@
   if (window.DeviceOrientationEvent) {
     window.addEventListener("deviceorientation", (ev) => {
       // ev.alpha -- steering wheel, ev.beta -- tilt, ev.gamma -- spin 0 is front;
-      initialTilt++;
-      if ((initialTilt = 30)) {
-        tiltStart = ev.beta;
-      }
       let spin = ev.gamma / 3;
       if (spin > 15) spin = 15;
       if (spin < -15) spin = -15;
       mousePercentX = spin * -1;
       //console.log(ev.beta);
-      let tilt = tiltStart - ev.beta;
-      if (tilt > tiltStart + 35) tilt = 35;
-      if (tilt < tiltStart - 35) tilt = -35;
-      console.log(tiltStart, tilt);
+      let tilt = 45 - ev.beta;
+      if (tilt > 45 + 35) tilt = 35;
+      if (tilt < 45 - 35) tilt = -35;
       mousePercentY = tilt / 3;
       //mouseSheen = Math.abs(tilt) * 3.33;
     });
