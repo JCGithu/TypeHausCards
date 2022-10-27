@@ -54,8 +54,8 @@
       mousePercentX = spin * -1;
       //console.log(ev.beta);
       let tilt = 45 - ev.beta;
-      if (tilt > 45 + 35) tilt = 35;
-      if (tilt < 45 - 35) tilt = -35;
+      if (tilt > 40) tilt = 40;
+      if (tilt < -40) tilt = -40;
       mousePercentY = tilt / 3;
       //mouseSheen = Math.abs(tilt) * 3.33;
     });
