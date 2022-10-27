@@ -53,17 +53,17 @@
       // ev.alpha -- steering wheel, ev.beta -- tilt, ev.gamma -- spin 0 is front;
       if (!initialTilt) {
         tiltStart = ev.beta;
+        initialTilt = true;
       }
-      initialTilt = true;
-
       let spin = ev.gamma / 3;
       if (spin > 15) spin = 15;
       if (spin < -15) spin = -15;
       mousePercentX = spin * -1;
-      console.log(ev.beta);
+      //console.log(ev.beta);
       let tilt = tiltStart - ev.beta;
       if (tilt > tiltStart + 35) tilt = 35;
       if (tilt < tiltStart - 35) tilt = -35;
+      console.log(tiltStart, tilt);
       mousePercentY = tilt / 3;
       //mouseSheen = Math.abs(tilt) * 3.33;
     });
