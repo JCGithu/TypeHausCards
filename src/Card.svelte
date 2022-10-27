@@ -47,15 +47,17 @@
 
   window.addEventListener("deviceorientation", (ev) => {
     // ev.alpha -- steering wheel, ev.beta -- tilt, ev.gamma -- spin 0 is front;
-    console.log(ev);
+    //console.log(ev);
     let spin = ev.gamma / 3;
     if (spin > 15) spin = 15;
     if (spin < -15) spin = -15;
     mousePercentX = spin * -1;
+    console.log(ev.beta);
     let tilt = 50 - ev.beta;
     if (tilt > 30) tilt = 30;
     if (tilt < 30) tilt = 30;
     mousePercentY = tilt / 3;
+    console.log(tilt);
     mouseSheen = Math.abs(tilt) * 3.33;
   });
 
