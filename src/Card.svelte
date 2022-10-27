@@ -6,6 +6,9 @@
   let winRatio;
   let flipped = false;
 
+  let initialTilt = false;
+  let tiltStart = 0;
+
   onMount(() => {
     styling.left = clicked.left + "px";
     styling.top = clicked.top + "px";
@@ -45,20 +48,26 @@
     mouseSheen = ((e.clientY - cardPosition.top) / (cardPosition.bottom - cardPosition.top)) * 100;
   }
 
-  window.addEventListener("deviceorientation", (ev) => {
-    // ev.alpha -- steering wheel, ev.beta -- tilt, ev.gamma -- spin 0 is front;
-    //console.log(ev);
-    let spin = ev.gamma / 3;
-    if (spin > 15) spin = 15;
-    if (spin < -15) spin = -15;
-    mousePercentX = spin * -1;
-    console.log(ev.beta);
-    let tilt = 50 - ev.beta;
-    if (tilt > 30) tilt = 30;
-    if (tilt < -30) tilt = -30;
-    mousePercentY = tilt / 3;
-    mouseSheen = Math.abs(tilt) * 3.33;
-  });
+  if (window.DeviceOrientationEvent) {
+    window.addEventListener("deviceorientation", (ev) => {
+      // ev.alpha -- steering wheel, ev.beta -- tilt, ev.gamma -- spin 0 is front;
+      if (!initialTilt) {
+        tiltStart = ev.beta;
+      }
+      initialTilt = true;
+
+      let spin = ev.gamma / 3;
+      if (spin > 15) spin = 15;
+      if (spin < -15) spin = -15;
+      mousePercentX = spin * -1;
+      console.log(ev.beta);
+      let tilt = tiltStart - ev.beta;
+      if (tilt > tiltStart + 35) tilt = 35;
+      if (tilt < tiltStart - 35) tilt = -35;
+      mousePercentY = tilt / 3;
+      //mouseSheen = Math.abs(tilt) * 3.33;
+    });
+  }
 
   function cardClick(e) {
     flipped = !flipped;
