@@ -55,9 +55,8 @@
     console.log(ev.beta);
     let tilt = 50 - ev.beta;
     if (tilt > 30) tilt = 30;
-    if (tilt < 30) tilt = 30;
+    if (tilt < -30) tilt = -30;
     mousePercentY = tilt / 3;
-    console.log(tilt);
     mouseSheen = Math.abs(tilt) * 3.33;
   });
 
