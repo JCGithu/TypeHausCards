@@ -79,7 +79,6 @@
 </script>
 
 <section out:fade class="cardContainer" style="background-color:{styling.background};">
-  <span>{mousePercentY}</span>
   <p id="closer" on:click={close}>X</p>
   <div on:click={cardClick} class="card" style:transform={`perspective(400px) rotateY(${mousePercentX + (flipped ? 180 : 0)}deg) rotateX(${mousePercentY}deg)`} style:--degree={`${(mousePercentX - mousePercentY) / 2}deg`} style:--p1="{Math.round(mouseSheen) - 10}%" style:--p2="{Math.round(mouseSheen)}%" style:--p3="{Math.round(mouseSheen) + 10}%" style:left={styling.left} style:top={styling.top} on:mousemove={cardMove} on:mouseleave|self={mouseLeave}>
     <img id="cardBack" style={`z-index:${styling.z}; width:${styling.width}; height:${styling.height}`} src="/images/Card_Back.png" alt={clicked.alt} />
